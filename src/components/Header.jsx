@@ -1,13 +1,20 @@
-import React from 'react';
-import logo from '../assets/logo.png'; // Asegúrate de tener este archivo en la carpeta assets
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header">
       <div className="header__logo">
-        <img src={logo} alt="Logo UTFSM" />
+        <div className="logo-placeholder">LOGO</div>
       </div>
-      <nav className="header__nav">
+      <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#universidad">Universidad</a></li>
@@ -16,10 +23,13 @@ const Header = () => {
           <li><a href="#cultura">Cultura</a></li>
         </ul>
       </nav>
-      <div className="header__buttons">
-        <button className="btn btn--secondary">Registrarse</button>
+      <div className={`header__buttons ${isMenuOpen ? 'header__buttons--open' : ''}`}>
+        <Link to="/registro" className="btn btn--secondary">Registrarse</Link>
         <button className="btn btn--primary">Iniciar Sesión</button>
       </div>
+      <button className="header__menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+        <FaBars />
+      </button>
     </header>
   );
 };
