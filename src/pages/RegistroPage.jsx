@@ -8,11 +8,11 @@ const RegistroPage = () => {
         <h2 className="card__title">Registro</h2>
         <form>
           <div className="form-group">
-            <label htmlFor="nombre">Nombre completo</label>
+            <label htmlFor="nombre">Nombre Completo</label>
             <input type="text" id="nombre" name="nombre" required />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Correo electrónico</label>
+            <label htmlFor="email">Correo Electrónico</label>
             <input type="email" id="email" name="email" required />
           </div>
           <div className="form-group">

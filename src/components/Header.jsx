@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import logo from '../assets/logo.png'; // Importa el logo
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        <div className="logo-placeholder">LOGO</div>
+        <img src={logo} alt="Logo" className="logo" /> {logo.png}
       </div>
       <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
         <ul>

@@ -35,14 +35,10 @@ body {
   position: relative;
 
   &__logo {
-    .logo-placeholder {
-      width: 100px;
-      height: 50px;
-      background-color: #ccc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
+    .logo {
+      width: 200px; /* Ajusta el tamaño del logo */
+      height: auto; /* Mantiene la proporción del logo */
+      margin-left: 1rem; /* Añade espacio a la izquierda */
     }
   }
 
@@ -168,7 +164,7 @@ body {
   text-align: center;
   padding: 2rem;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 25px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-bottom: 1rem;
   flex-basis: calc(33.333% - 2rem);
@@ -241,7 +237,7 @@ body {
     &__title {
       font-size: 1.5rem;
       font-weight: bold;
-      text-align: center;
+      text-align: left;
       margin-bottom: 1.5rem;
     }
 
@@ -257,7 +253,9 @@ body {
       }
 
       label {
-        font-weight: bold;
+        font-weight: 500;
+        text-align: left;
+        opacity: 0.9;
       }
 
       input {
