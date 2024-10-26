@@ -25,7 +25,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className={`header__buttons ${isMenuOpen ? 'header__buttons--open' : ''}`}>
-        <Link to="/registro" className="btn btn--secondary">Registrarse</Link>
+        <Link to="/registrer" className="btn btn--secondary">Registrarse</Link>
         <button className="btn btn--primary">Iniciar Sesión</button>
       </div>
       <button className="header__menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">

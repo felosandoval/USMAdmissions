@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const RegistroPage = () => {
+const RegistrerPage = () => {
   return (
-    <div className="registro-page">
+    <div className="registrer-page">
       <div className="card">
         <h2 className="card__title">Registro</h2>
         <form>
@@ -33,4 +33,4 @@ const RegistroPage = () => {
   );
 };
 
-export default RegistroPage;
+export default RegistrerPage;

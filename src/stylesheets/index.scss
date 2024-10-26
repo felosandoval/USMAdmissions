@@ -1,9 +1,10 @@
 @use 'base/variables';
 @use 'base/mixins';
 @use 'base/global';
+
 @use 'components/header';
 @use 'components/banner';
 @use 'components/cards';
 @use 'components/buttons';
-@use 'pages/login/login';
+
 @use 'pages/registrer/registrer';

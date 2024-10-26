@@ -17,4 +17,9 @@
     color: variables.$primary-color;
     border: 1px solid variables.$primary-color;
   }
+
+  &--large {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
 }

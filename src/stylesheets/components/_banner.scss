@@ -10,6 +10,7 @@
   h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+
     @include mixins.respond-to('small') {
       font-size: 2rem;
     }
@@ -18,6 +19,7 @@
   h2 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+
     @include mixins.respond-to('small') {
       font-size: 1.2rem;
     }

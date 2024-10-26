@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
-import RegistroPage from './RegistroPage';
+import RegistrerPage from './RegistrerPage';
 import { FaUsers, FaCogs, FaLightbulb } from 'react-icons/fa';
 
 const HomePage = () => {
@@ -37,7 +37,7 @@ const HomePage = () => {
               </>
             } 
           />
-          <Route path="/registro" element={<RegistroPage />} />
+          <Route path="/registrer" element={<RegistrerPage />} />
         </Routes>
       </div>
     </Router>
