@@ -1,0 +1,53 @@
+@use '../base/mixins';
+@use '../base/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+
+  &__logo {
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-left: 1rem;
+    }
+  }
+
+  &__nav {
+    @include mixins.respond-to('small') {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-right: 1rem;
+
+        a {
+          color: variables.$text-color;
+          text-decoration: none;
+
+          &:hover {
+            color: variables.$primary-color;
+          }
+        }
+      }
+    }
+  }
+}

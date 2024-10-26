@@ -1,0 +1,9 @@
+@use '../../base/variables';
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: variables.$background-color;
+}

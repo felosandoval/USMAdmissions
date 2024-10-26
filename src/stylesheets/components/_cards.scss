@@ -1,0 +1,24 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.card {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-basis: calc(33.333% - 2rem);
+
+  @include mixins.respond-to('small') {
+    flex-basis: 100%;
+  }
+}
