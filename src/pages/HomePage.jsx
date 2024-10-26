@@ -1,10 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { FaUsers, FaCogs, FaLightbulb } from 'react-icons/fa';
+
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
+
 import RegistrerPage from './RegistrerPage';
-import { FaUsers, FaCogs, FaLightbulb } from 'react-icons/fa';
+import LoginPage from './LoginPage';
 
 const HomePage = () => {
   return (
@@ -38,6 +41,8 @@ const HomePage = () => {
             } 
           />
           <Route path="/registrer" element={<RegistrerPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/carreras"> <CarrerasPage /> </Route>
         </Routes>
       </div>
     </Router>

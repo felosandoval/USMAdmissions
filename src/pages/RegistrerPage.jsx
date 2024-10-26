@@ -26,7 +26,7 @@ const RegistrerPage = () => {
           <button type="submit" className="btn btn--primary">Registrarse</button>
         </form>
         <div className="login-link">
-          ¿Ya tienes una cuenta? <Link to="/">Iniciar sesión</Link>
+          ¿Ya tienes una cuenta? <Link to="/login">Iniciar sesión</Link>
         </div>
       </div>
     </div>
