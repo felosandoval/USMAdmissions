@@ -1,11 +1,22 @@
-import React from 'react'
-import '../stylesheets/ResumenPage.scss'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../stylesheets/ResumenPage.scss';
+
+import logo from '../assets/logo.png';
+import logo_escudo from '../assets/logo_escudo.png';
 
 export default function ResumenPage() {
+  const navigate = useNavigate();
+
+  const goToResumen = () => navigate('/resumen');
+  const goToPostulacionesHistoricas = () => navigate('/postulaciones-historicas');
+  const goToPostular = () => navigate('/postular');
+  const goToCerrarSesion = () => navigate('/');
+
   return (
     <div className="resumen-page">
-      <div className="logo-container">
-        <img src="/logo-universidad.svg" alt="Logo Universidad" className="logo" />
+      <div className="logo-container" onClick={goToCerrarSesion} style={{ cursor: 'pointer' }}>
+        <img src={logo} alt="Logo" className="logo" />
       </div>
       <div className="content-wrapper">
         <aside className="sidebar">
@@ -20,14 +31,14 @@ export default function ResumenPage() {
             </div>
           </div>
           <nav>
-            <a href="#" className="active">
+            <a href="#" onClick={goToResumen} className="active">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
               </svg>
               Resumen
             </a>
-            <a href="#">
+            <a href="#" onClick={goToPostulacionesHistoricas}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
@@ -37,7 +48,7 @@ export default function ResumenPage() {
               </svg>
               Postulaciones históricas
             </a>
-            <a href="#">
+            <a href="#" onClick={goToPostular}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
@@ -49,7 +60,7 @@ export default function ResumenPage() {
             </a>
           </nav>
           <div className="logout">
-            <a href="#">
+            <a href="#" onClick={goToCerrarSesion}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                 <polyline points="16 17 21 12 16 7"></polyline>
@@ -68,7 +79,7 @@ export default function ResumenPage() {
             <div className="application-cards">
               <div className="card">
                 <div className="card-header">
-                  <img src="/placeholder.svg" alt="University Logo" width="50" height="50" />
+                  <img src={logo_escudo} alt="Logo_escudo" className="logo_escudo" />
                   <div className="card-title">
                     <h2>Ing. Civil (CC)</h2>
                     <p>Estado: Revision de Documentos</p>
@@ -83,7 +94,7 @@ export default function ResumenPage() {
 
               <div className="card">
                 <div className="card-header">
-                  <img src="/placeholder.svg" alt="University Logo" width="50" height="50" />
+                  <img src={logo_escudo} alt="Logo_escudo" className="logo_escudo" />
                   <div className="card-title">
                     <h2>Ing. Civil Industrial (SJ)</h2>
                     <p>Estado: RECHAZADO</p>
@@ -96,5 +107,5 @@ export default function ResumenPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

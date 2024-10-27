@@ -1,13 +1,12 @@
-// import '../stylesheets/ResumenPage.scss'
-// Variables
-$primary-color: #1e40af;
-$secondary-color: #1e3a8a;
+$primary-color: #005E90;
+$secondary-color: #005E90;
 $accent-color: #93c5fd;
-$background-color: #f3f4f6;
+$background-color: #ffffff;
 $text-color: #ffffff;
-$header-color: #1f2937;
+$header-color: #ffffff;
+$top-bar-color: #ffffff;
+$sidebar-color: #0c4a6e;
 
-// Mixins
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -22,27 +21,34 @@ $header-color: #1f2937;
   color: $text-color;
 
   .logo-container {
-    background-color: $primary-color;
+    background-color: $top-bar-color;
     padding: 1rem;
-    position: static; // Updated: position changed to static
+    position: static;
     display: flex;
-    align-items: center; // Updated: added flex and align-items
+    align-items: center;
+    justify-content: space-between;
 
     .logo {
-      width: 100px;
+      width: 200px;
       height: auto;
+    }
+
+    .resumen-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $sidebar-color;
+      text-transform: uppercase;
     }
   }
 
   .content-wrapper {
     display: flex;
     flex: 1;
-    //padding-top: 100px; // Removed padding-top
   }
 
   .sidebar {
     width: 16rem;
-    background-color: $primary-color;
+    background-color: $sidebar-color;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -87,7 +93,7 @@ $header-color: #1f2937;
         transition: background-color 0.3s;
 
         &:hover, &.active {
-          background-color: darken($primary-color, 5%);
+          background-color: darken($sidebar-color, 5%);
         }
 
         svg {
@@ -111,7 +117,7 @@ $header-color: #1f2937;
         transition: background-color 0.3s;
 
         &:hover {
-          background-color: darken($primary-color, 5%);
+          background-color: darken($sidebar-color, 5%);
         }
 
         svg {
@@ -126,7 +132,7 @@ $header-color: #1f2937;
   .main-content {
     flex: 1;
     overflow: auto;
-    padding-top: 0; // Updated: padding-top set to 0
+    padding-top: 0;
 
     header {
       background-color: $header-color;
@@ -136,6 +142,7 @@ $header-color: #1f2937;
         font-size: 1.5rem;
         font-weight: bold;
         margin: 0;
+        color: $sidebar-color;
       }
     }
 
