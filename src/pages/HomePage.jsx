@@ -9,17 +9,19 @@ import Card from '../components/Card';
 import RegistrerPage from './RegistrerPage';
 import LoginPage from './LoginPage';
 import CarrerasPage from './CarrerasPage';
+import ResumenPage from './ResumenPage';
+
 
 const HomePage = () => {
   return (
     <Router>
       <div className="home-page">
-        <Header />
         <Routes>
           <Route 
             path="/" 
             element={
               <>
+                <Header /> 
                 <Banner />
                 <div className="cards-container">
                   <Card 
@@ -41,13 +43,40 @@ const HomePage = () => {
               </>
             } 
           />
-          <Route path="/registrer" element={<RegistrerPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/carreras" element={<CarrerasPage />} />
+          <Route 
+            path="/registrer" 
+            element={
+              <>
+                <Header />
+                <RegistrerPage />
+              </>
+            } 
+          />
+          <Route 
+            path="/login" 
+            element={
+              <>
+                <Header />
+                <LoginPage />
+              </>
+            } 
+          />
+          <Route 
+            path="/carreras" 
+            element={
+              <>
+                <Header />
+                <CarrerasPage />
+              </>
+            } 
+          />
+          <Route path="/resumen" element={<ResumenPage />} /> 
         </Routes>
       </div>
     </Router>
   );
 };
+
+
 
 export default HomePage;

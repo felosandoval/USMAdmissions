@@ -1,12 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate('/resumen'); // Redirige a la página de resumen
+  };
+
   return (
     <div className="login-page">
       <div className="card">
         <h2 className="card__title">Iniciar Sesión</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Correo Electrónico</label>
             <input type="email" id="email" name="email" required />
@@ -26,3 +33,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
