@@ -1,0 +1,212 @@
+$primary-color: #005E90;
+$secondary-color: #005E90;
+$accent-color: #93c5fd;
+$background-color: #ffffff;
+$text-color: #ffffff;
+$header-color: #ffffff;
+$top-bar-color: #ffffff;
+$sidebar-color: #0c4a6e;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.historial-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+
+  .logo-container {
+    background-color: $top-bar-color;
+    padding: 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .resumen-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $sidebar-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex: 1;
+  }
+
+  .sidebar {
+    width: 16rem;
+    background-color: $sidebar-color;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+
+    .user-info {
+      padding: 1rem;
+      @include flex-center;
+
+      .avatar {
+        width: 3rem;
+        height: 3rem;
+        background-color: $text-color;
+        color: $primary-color;
+        border-radius: 50%;
+        padding: 0.5rem;
+        margin-right: 1rem;
+      }
+
+      .user-details {
+        h2 {
+          font-weight: bold;
+          margin: 0;
+        }
+        p {
+          font-size: 0.875rem;
+          margin: 0;
+        }
+      }
+    }
+
+    nav {
+      margin-top: 2rem;
+      flex-grow: 1;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        color: $text-color;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover, &.active {
+          background-color: darken($sidebar-color, 5%);
+        }
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .logout {
+      padding: 1rem;
+
+      a {
+        @include flex-center;
+        font-size: 0.875rem;
+        color: $text-color;
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($sidebar-color, 5%);
+        }
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    overflow: auto;
+    padding-top: 0;
+    background-color: $background-color;
+
+    header {
+        background-color: $header-color;
+        padding: 1rem;
+  
+        h1 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 0;
+          color: $sidebar-color;
+        }
+      }
+
+    main {
+      padding: 1.5rem;
+
+      .application-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: $primary-color;
+        color: $text-color;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        th, td {
+          padding: 1rem;
+          text-align: left;
+          border-bottom: 1px solid $secondary-color;
+        }
+
+        th {
+          background-color: darken($primary-color, 5%);
+          font-weight: bold;
+        }
+
+        tr:last-child td {
+          border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+          background-color: lighten($primary-color, 5%);
+        }
+
+        tr:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .historial-page {
+    .logo-container {
+      flex-direction: column;
+      align-items: center;
+      
+      .resumen-title {
+        margin-top: 1rem;
+      }
+    }
+
+    .content-wrapper {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      width: 100%;
+    }
+
+    .main-content {
+      padding-top: 1rem;
+    }
+  }
+}

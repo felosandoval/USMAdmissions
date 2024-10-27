@@ -10,6 +10,7 @@ import RegistrerPage from './RegistrerPage';
 import LoginPage from './LoginPage';
 import CarrerasPage from './CarrerasPage';
 import ResumenPage from './ResumenPage';
+import HistorialPage from './HistorialPage';
 
 
 const HomePage = () => {
@@ -71,6 +72,7 @@ const HomePage = () => {
             } 
           />
           <Route path="/resumen" element={<ResumenPage />} /> 
+          <Route path="/historial" element={<HistorialPage />} /> 
         </Routes>
       </div>
     </Router>

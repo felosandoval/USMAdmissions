@@ -1,11 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../stylesheets/ResumenPage.scss';
+import '../stylesheets/HistorialPage.scss';
 
 import logo from '../assets/logo.png';
-import logo_escudo from '../assets/logo_escudo.png';
 
-export default function ResumenPage() {
+export default function HistorialPage() {
   const navigate = useNavigate();
 
   const goToResumen = () => navigate('/resumen');
@@ -13,10 +12,19 @@ export default function ResumenPage() {
   const goToPostular = () => navigate('/postular');
   const goToCerrarSesion = () => navigate('/');
 
+  // Sample data for the table
+  const applicationData = [
+    { id: '9999001', carrera: 'Ing. Civil', sede: 'Viña del mar', ubicacion: '3 Norte', puntaje: 780 },
+    { id: '9999003', carrera: 'Ing. Matemática', sede: 'Concepción', ubicacion: 'Valparaíso', puntaje: 540 },
+    { id: '9999002', carrera: 'Ing. Informática', sede: 'Casa Central', ubicacion: '4 Norte', puntaje: 700 },
+    { id: '9999004', carrera: 'Lic. Matemática', sede: 'San Joaquín', ubicacion: 'Santiago', puntaje: 980 },
+  ];
+
   return (
-    <div className="resumen-page">
-      <div className="logo-container" onClick={goToCerrarSesion} style={{ cursor: 'pointer' }}>
-        <img src={logo} alt="Logo" className="logo" />
+    <div className="historial-page">
+      <div className="logo-container">
+        <img src={logo} alt="Logo" className="logo" onClick={goToCerrarSesion} />
+        <h1 className="resumen-title"></h1>
       </div>
       <div className="content-wrapper">
         <aside className="sidebar">
@@ -73,36 +81,31 @@ export default function ResumenPage() {
 
         <div className="main-content">
           <header>
-            <h1>Resumen</h1>
+            <h1>Postulaciones Historicas</h1>
           </header>
           <main>
-            <div className="application-cards">
-              <div className="card">
-                <div className="card-header">
-                  <img src={logo_escudo} alt="Logo_escudo" className="logo_escudo" />
-                  <div className="card-title">
-                    <h2>Ing. Civil (CC)</h2>
-                    <p>Estado: Revision de Documentos</p>
-                    <p>Fecha Postulacion: 18/09/2024</p>
-                  </div>
-                </div>
-                <div className="progress-bar">
-                  <div className="progress" style={{width: '60%'}}></div>
-                </div>
-                <p className="progress-text">Progreso de Postulacion 60%</p>
-              </div>
-
-              <div className="card">
-                <div className="card-header">
-                  <img src={logo_escudo} alt="Logo_escudo" className="logo_escudo" />
-                  <div className="card-title">
-                    <h2>Ing. Civil Industrial (SJ)</h2>
-                    <p>Estado: RECHAZADO</p>
-                    <p>Fecha Postulacion: 17/09/2024</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <table className="application-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Carrera</th>
+                  <th>Sede</th>
+                  <th>Ubicación</th>
+                  <th>Puntaje</th>
+                </tr>
+              </thead>
+              <tbody>
+                {applicationData.map((app, index) => (
+                  <tr key={app.id}>
+                    <td>{app.id}</td>
+                    <td>{app.carrera}</td>
+                    <td>{app.sede}</td>
+                    <td>{app.ubicacion}</td>
+                    <td>{app.puntaje}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </main>
         </div>
       </div>
