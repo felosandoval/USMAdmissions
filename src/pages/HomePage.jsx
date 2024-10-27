@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { FaUsers, FaCogs, FaLightbulb } from 'react-icons/fa';
 
 import Header from '../components/Header';
@@ -8,6 +8,7 @@ import Card from '../components/Card';
 
 import RegistrerPage from './RegistrerPage';
 import LoginPage from './LoginPage';
+import CarrerasPage from './CarrerasPage';
 
 const HomePage = () => {
   return (
@@ -42,7 +43,7 @@ const HomePage = () => {
           />
           <Route path="/registrer" element={<RegistrerPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/carreras"> <CarrerasPage /> </Route>
+          <Route path="/carreras" element={<CarrerasPage />} />
         </Routes>
       </div>
     </Router>

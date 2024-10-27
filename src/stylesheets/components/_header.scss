@@ -69,6 +69,18 @@
     display: flex;
     gap: 1rem;
 
+    button {
+      border: none;
+      background: variables.$primary-color;
+      color: white; // Cambia este color al deseado
+      cursor: pointer;
+      border-radius: 12px;
+
+      &:hover {
+        color: variables.$secondary-color; // Cambia este color al deseado para el hover
+      }
+    }
+
     @include mixins.respond-to('small') {
       display: none;
       flex-direction: column;
@@ -78,7 +90,7 @@
       right: 0;
       background-color: white;
       padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgb(255, 255, 255);
 
       &--open {
         display: flex;

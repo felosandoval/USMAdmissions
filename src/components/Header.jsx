@@ -30,12 +30,14 @@ const Header = () => {
       <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
         <ul>
           <li>
-            <Link to="/"> {/* Cambiado a Link para redirigir a la página principal */}
+            <Link to="/">
               Inicio
             </Link>
           </li>
           <li>
-            <a href="#universidad">Carreras</a>
+            <Link to="/carreras">
+              Carreras
+            </Link>
           </li>
         </ul>
       </nav>
@@ -43,6 +45,7 @@ const Header = () => {
         {location.pathname !== '/registrer' && (
           <button onClick={handleRegisterClick} className="btn btn--secondary">Registrarse</button>
         )}
+        
         {location.pathname !== '/login' && (
           <button onClick={handleLoginClick} className="btn btn--primary">Iniciar Sesión</button>
         )}

@@ -1,0 +1,61 @@
+// Carreras page styles
+.carreras-page {
+    padding: 2rem;
+
+    &__titulo {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+  
+.carreras-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 2rem;
+}
+
+.carrera-card {
+border-radius: 15px;
+overflow: hidden;
+position: relative;
+height: 200px;
+background-size: cover;
+background-position: center;
+transition: transform 0.3s ease;
+
+&:hover {
+    transform: scale(1.05);
+}
+
+&__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    color: white;
+}
+
+&__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+&__duracion {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+.carreras-grid {
+    grid-template-columns: 1fr;
+}
+
+.carrera-card {
+    height: 150px;
+}
+}
