@@ -82,8 +82,10 @@ export default function ResumenPage() {
                   <img src={logo_escudo} alt="Logo_escudo" className="logo_escudo" />
                   <div className="card-title">
                     <h2>Ing. Civil (CC)</h2>
-                    <p>Estado: Revision de Documentos</p>
+                    <p> Estado: Revision de Documentos</p>
                     <p>Fecha Postulacion: 18/09/2024</p>
+                    <p>Numero de Postulacion: 17080</p>
+                    <p>Fecha de Resultados: 30/09/2024</p>
                   </div>
                 </div>
                 <div className="progress-bar">
@@ -99,6 +101,8 @@ export default function ResumenPage() {
                     <h2>Ing. Civil Industrial (SJ)</h2>
                     <p>Estado: RECHAZADO</p>
                     <p>Fecha Postulacion: 17/09/2024</p>
+                    <p>Numero de Postulacion: 5030</p>
+                    <p>Fecha de Resultados: 18/09/2024</p>
                   </div>
                 </div>
               </div>

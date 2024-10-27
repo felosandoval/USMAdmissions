@@ -152,9 +152,14 @@ $sidebar-color: #0c4a6e;
       .application-cards {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         gap: 1.5rem;
 
         .card {
+          flex: 1; 
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           background-color: $primary-color;
           border-radius: 0.5rem;
           padding: 1.5rem;
@@ -164,8 +169,8 @@ $sidebar-color: #0c4a6e;
             margin-bottom: 1rem;
 
             img {
-              width: 3.125rem;
-              height: 3.125rem;
+              width: 5rem;
+              height: 5rem;
               background-color: $text-color;
               padding: 0.25rem;
               border-radius: 0.25rem;
@@ -177,15 +182,17 @@ $sidebar-color: #0c4a6e;
                 font-size: 1.5rem;
                 font-weight: bold;
                 margin: 0;
+                display: flex;
               }
               p {
                 margin: 0;
+                display: flex;
               }
             }
           }
 
           .progress-bar {
-            background-color: $secondary-color;
+            background-color: $background-color;
             border-radius: 9999px;
             height: 1rem;
             width: 100%;
