@@ -9,7 +9,7 @@ export default function HistorialPage() {
 
   const goToResumen = () => navigate('/resumen');
   const goToPostulacionesHistoricas = () => navigate('/historial');
-  const goToPostular = () => navigate('/postular');
+  const goToPostular = () => navigate('/formulario');
   const goToCerrarSesion = () => navigate('/');
 
   // Sample data for the table

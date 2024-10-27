@@ -11,6 +11,7 @@ import LoginPage from './LoginPage';
 import CarrerasPage from './CarrerasPage';
 import ResumenPage from './ResumenPage';
 import HistorialPage from './HistorialPage';
+import FormularioPage from './FormularioPage';
 
 
 const HomePage = () => {
@@ -72,7 +73,8 @@ const HomePage = () => {
             } 
           />
           <Route path="/resumen" element={<ResumenPage />} /> 
-          <Route path="/historial" element={<HistorialPage />} /> 
+          <Route path="/historial" element={<HistorialPage />} />
+          <Route path="/formulario" element={<FormularioPage />} /> 
         </Routes>
       </div>
     </Router>
