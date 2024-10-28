@@ -13,7 +13,7 @@ export default function ResumenPage() {
   const goToCerrarSesion = () => navigate('/');
 
   return (
-    <div className="resumen-page">
+    <div className="formulario-page">
       <div className="logo-container" onClick={goToCerrarSesion} style={{ cursor: 'pointer' }}>
         <img src={logo} alt="Logo" className="logo" />
       </div>
@@ -69,6 +69,16 @@ export default function ResumenPage() {
             </a>
           </div>
         </aside>
+
+        <div className="main-content">
+          <header>
+            <h1>Formulario de Admisión</h1>
+          </header>
+            <main>
+                <p>En esta página se mostrarán los datos del formulario</p>
+            </main>
+
+            </div>
       </div>
     </div>
   );
