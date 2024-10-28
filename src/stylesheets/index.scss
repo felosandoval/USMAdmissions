@@ -1,12 +1,16 @@
-@use 'base/variables';
-@use 'base/mixins';
 @use 'base/global';
+@use 'base/mixins';
+@use 'base/variables';
 
-@use 'components/header';
 @use 'components/banner';
-@use 'components/cards';
 @use 'components/buttons';
+@use 'components/cards';
+@use 'components/header';
+@use 'components/sidebar';
 
-@use 'pages/registrer/registrer';
-@use 'pages/login/login';
-@use 'pages/carreras/carreras';
+@use 'pages/carreras';
+@use 'pages/formulario';
+@use 'pages/historial';
+@use 'pages/login';
+@use 'pages/registrer';
+@use 'pages/resumen';

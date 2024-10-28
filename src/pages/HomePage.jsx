@@ -54,6 +54,7 @@ const HomePage = () => {
               </>
             } 
           />
+          
           <Route 
             path="/login" 
             element={
@@ -63,6 +64,7 @@ const HomePage = () => {
               </>
             } 
           />
+
           <Route 
             path="/carreras" 
             element={
@@ -72,9 +74,36 @@ const HomePage = () => {
               </>
             } 
           />
-          <Route path="/resumen" element={<ResumenPage />} /> 
-          <Route path="/historial" element={<HistorialPage />} />
-          <Route path="/formulario" element={<FormularioPage />} /> 
+
+          <Route 
+            path="/resumen" 
+            element={
+              <>
+                <Header />
+                <ResumenPage />
+              </>
+            } 
+          />
+
+          <Route 
+            path="/historial" 
+            element={
+              <>
+                <Header />
+                <HistorialPage />
+              </>
+            } 
+          />
+
+          <Route 
+            path="/formulario" 
+            element={
+              <>
+                <Header />
+                <FormularioPage />
+              </>
+            } 
+          />
         </Routes>
       </div>
     </Router>

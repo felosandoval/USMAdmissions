@@ -7,7 +7,7 @@
   align-items: center;
   padding: 1rem;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
 
   &__logo {
@@ -19,29 +19,21 @@
   }
 
   &__nav {
-    @include mixins.respond-to('small') {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: white;
-      padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-      &--open {
-        display: block;
-      }
-    }
+    flex: 1;
+    display: flex;
+    justify-content: left; // Centra los links
+    align-items: center;
 
     ul {
       display: flex;
       list-style-type: none;
       margin: 0;
       padding: 0;
-
+      margin-left: 2rem;
+      
       li {
         margin-right: 1rem;
+        align-items: left;
 
         a {
           color: variables.$text-color;
@@ -52,15 +44,20 @@
           }
         }
       }
+    }
 
-      @include mixins.respond-to('small') {
-        flex-direction: column;
-        align-items: center;
+    @include mixins.respond-to('small') {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-        li {
-          margin-right: 0;
-          margin-bottom: 1rem;
-        }
+      &--open {
+        display: block;
       }
     }
   }
@@ -72,28 +69,13 @@
     button {
       border: none;
       background: variables.$primary-color;
-      color: white; // Cambia este color al deseado
+      color: white;
       cursor: pointer;
       border-radius: 12px;
+      padding: 0.5rem 1rem;
 
       &:hover {
-        color: variables.$secondary-color; // Cambia este color al deseado para el hover
-      }
-    }
-
-    @include mixins.respond-to('small') {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: white;
-      padding: 1rem;
-      box-shadow: 0 2px 4px rgb(255, 255, 255);
-
-      &--open {
-        display: flex;
+        color: variables.$secondary-color;
       }
     }
   }

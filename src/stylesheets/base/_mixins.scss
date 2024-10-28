@@ -8,3 +8,8 @@
     @media (min-width: 1024px) { @content; }
   }
 }
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
