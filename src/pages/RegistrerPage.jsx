@@ -1,12 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const RegistrerPage = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Evita el comportamiento por defecto del formulario
+
+    // Redirige a la página después del registro
+    navigate('/login');
+  };
+
   return (
     <div className="registrer-page">
       <div className="card">
         <h2 className="card__title">Registro</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="nombre">Nombre Completo</label>
             <input type="text" id="nombre" name="nombre" required />
