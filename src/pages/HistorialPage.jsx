@@ -10,7 +10,7 @@ export default function HistorialPage() {
   const goToPostular = () => navigate('/formulario');
   const goToCerrarSesion = () => navigate('/');
 
-  // Daros para tabla
+  // Datos para tabla
   const applicationData = [
     { id: '9999001', carrera: 'Ing. Civil', sede: 'Viña del mar', ubicacion: '3 Norte', puntaje: 780 },
     { id: '9999003', carrera: 'Ing. Matemática', sede: 'Concepción', ubicacion: 'Valparaíso', puntaje: 540 },
