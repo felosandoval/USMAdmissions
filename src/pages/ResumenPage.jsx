@@ -8,7 +8,6 @@ export default function ResumenPage() {
   const goToResumen = () => navigate('/resumen');
   const goToPostulacionesHistoricas = () => navigate('/historial');
   const goToPostular = () => navigate('/formulario');
-  const goToCerrarSesion = () => navigate('/');
 
   return (
     <div className="resumen-page">
