@@ -1,7 +1,7 @@
 import React from 'react';
 import CarreraCard from '../components/CarreraCard';
 
-// Importa todas las imágenes de la carpeta `carreras`
+//Se importan todas las imágenes de la carpeta `carreras`
 const imagenes = require.context('../assets/carreras', false, /\.(png|jpe?g|svg)$/);
 
 
