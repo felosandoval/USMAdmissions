@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import ProgressBar from '../components/Progressbar';
 
 export default function ResumenPage() {
   const navigate = useNavigate();
@@ -40,19 +41,17 @@ export default function ResumenPage() {
   const handleBack = (e) => {
     e.preventDefault();
     setFormStep(1); // Vuelve a la primera sección del formulario
-};
+  };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  setShowSuccessMessage(true); // Muestra el mensaje de éxito
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowSuccessMessage(true); // Muestra el mensaje de éxito
 
-  setTimeout(() => {
-    setShowSuccessMessage(false); // Oculta el mensaje de éxito
-    navigate('/resumen'); // Redirige a la página de resumen después de 4 segundos
-  }, 4000);
-};
-
-
+    setTimeout(() => {
+      setShowSuccessMessage(false); // Oculta el mensaje de éxito
+      navigate('/resumen'); // Redirige a la página de resumen después de 4 segundos
+    }, 4000);
+  };
 
   const regions = ["Región Metropolitana", "Valparaíso", "Biobío", "Araucanía"];
   const communes = {
@@ -80,6 +79,8 @@ const handleSubmit = (e) => {
             <h1>Formulario de Admisión</h1>
           </header>
           <main>
+            <ProgressBar currentStep={formStep} /> {/* Barra de estado arriba del formulario */}
+            
             {formStep === 1 && (
               <form className="admission-form" onSubmit={handleContinue}>
                 <div className="form-row">
