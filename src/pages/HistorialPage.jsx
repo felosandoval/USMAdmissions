@@ -34,7 +34,7 @@ export default function HistorialPage() {
 
         <div className="main-content">
           <header>
-            <h1>Postulaciones Historicas</h1>
+            <h1>Postulaciones Históricas</h1>
           </header>
           <main>
             <table className="application-table">

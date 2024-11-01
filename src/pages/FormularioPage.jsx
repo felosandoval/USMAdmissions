@@ -76,7 +76,7 @@ export default function ResumenPage() {
 
         <div className="main-content">
           <header>
-            <h1>Formulario de Admisión</h1>
+            <h1>Formulario de Postulación</h1>
           </header>
           <main>
             <ProgressBar currentStep={formStep} /> {/* Barra de estado arriba del formulario */}
