@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const RegistrerPage = () => {
   const navigate = useNavigate();
-  const goToLogin = () => navigate('/resumen');
+  const goToLogin = () => navigate('/formulario');
 
   return (
     <div className="registrer-page">

@@ -6,7 +6,7 @@ const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/resumen'); // Redirige a la página de resumen
+    navigate('/resumen');
   };
 
   return (
