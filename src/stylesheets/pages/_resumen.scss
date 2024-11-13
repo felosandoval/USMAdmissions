@@ -1,36 +1,14 @@
 @use "../base/variables";
 @use "../base/mixins";
 
-$accent-color:#93c5fd;
+$accent-color: #93c5fd;
 
 .resumen-page {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: variables.$secondary-color;
   color: variables.$secondary-color;
-
-  .logo-container {
-    background-color: variables.$secondary-color;
-    padding: 1rem;
-    position: static;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .logo {
-      width: 200px;
-      height: auto;
-    }
-
-    .resumen-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: variables.$primary-color;
-      text-transform: uppercase;
-    }
-  }
 
   .content-wrapper {
     display: flex;
@@ -38,8 +16,10 @@ $accent-color:#93c5fd;
   }
 
   .main-content {
-    flex: 1;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden; // Evita el desbordamiento global
     padding-top: 0;
 
     header {
@@ -50,14 +30,20 @@ $accent-color:#93c5fd;
         font-size: 1.5rem;
         font-weight: bold;
         margin: 0;
-        color: variables.$primary-color; // Changed to primary color
+        color: variables.$primary-color;
       }
     }
 
     main {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
       padding: 1.5rem;
 
       .application-cards {
+        flex-grow: 1;
+        overflow-y: auto; // Habilita el scroll vertical solo aquí
+        max-height: calc(100vh - 150px); // Ajusta para el espacio disponible menos header y paddings
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 2rem;
@@ -72,7 +58,7 @@ $accent-color:#93c5fd;
           min-height: 320px;
           max-height: 380px;
           color: variables.$text-color-sidebar;
-          
+
           .card-header {
             display: flex;
             flex-direction: column;
@@ -91,14 +77,14 @@ $accent-color:#93c5fd;
 
             .card-title {
               width: 100%;
-              
+
               h2 {
                 font-size: 1.25rem;
                 font-weight: bold;
                 margin: 0 0 0.5rem 0;
                 justify-content: center;
               }
-              
+
               p {
                 margin: 0.25rem 0;
                 justify-content: center;
@@ -138,10 +124,10 @@ $accent-color:#93c5fd;
     main {
       .application-cards {
         grid-template-columns: 1fr;
-        
+
         .card {
           min-height: 300px;
-          
+
           .card-header {
             img {
               width: 5rem;
