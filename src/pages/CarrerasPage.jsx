@@ -7,48 +7,48 @@ const imagenes = require.context('../assets/carreras', false, /\.(png|jpe?g|svg)
 
 const carreras = [
     {   titulo: "Ingeniería Civil",
-        profesional: "Título Profesional: Ingeniero Civil o Ingeniera Civil",
-        duracion: "Duración de los estudios: 6 años",
+        profesional: "Puntaje de corte: 745 puntos",
+        duracion: "Duración: 11 semestres",
         lugar: "Lugar: Campus Casa Central Valparaíso",
         
         imagen: imagenes("./ingenieria_civil.jpg")
     },
 
     {   titulo: "Ingeniería Comercial",
-        profesional: "Título Profesional: Ingeniero Comercial",
-        duracion: "Duración de los estudios: 5 años",
+        profesional: "Puntaje de corte: 725 puntos",
+        duracion: "Duración: 10 semestres",
         lugar: "Lugar: Campus Casa Central Valparaíso",
 
         imagen: imagenes("./ingenieria-comercial.jpg")
     },
   
     {   titulo: "Arquitectura",
-        profesional: "Título Profesional: Arquitecto o Arquitecta",
-        duracion: "Duración de los estudios: 6 años",
+        profesional: "Puntaje de corte: 728 puntos",
+        duracion: "Duración: 11 semestres",
         lugar: "Lugar: Sede Viña del Mar y Sede Concepción",
 
         imagen: imagenes("./arquitectura.jpg")
     },
   
     {   titulo: "Ingeniería Informática",
-        profesional: "Título Profesional: Ingeniero Informático",
-        duracion: "Duración de los estudios: 6 años",
+        profesional: "Puntaje de corte: 763 puntos",
+        duracion: "Duración: 10 semestres",
         lugar: "Lugar: Sede Viña del Mar y Sede Concepción",
       
         imagen: imagenes("./ingeniería_informatica.jpg")
     },
   
     {   titulo: "Licenciatura en Física",
-        profesional: "Título Profesional: Licenciado en Física",
-        duracion: "Duración de los estudios: 4 años",
+        profesional: "Puntaje de corte: 787 puntos",
+        duracion: "Duración: 8 semestres",
         lugar: "Lugar: Campus Casa Central Valparaíso",
 
         imagen: imagenes("./fisica.jpg")
     },
   
     {   titulo: "Ingeniería Mecánica",
-        profesional: "Título Profesional: Ingeniero Mecánico",
-        duracion: "Duración de los estudios: 4 años",
+        profesional: "Puntaje de corte: 694 puntos",
+        duracion: "Duración: 11 semestres",
         lugar: "Lugar: Sede Concepción",
 
         imagen: imagenes("./mecanica.jpg")
